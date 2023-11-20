@@ -30,11 +30,11 @@ export const NavLogo = styled(LinkR)`
   width: 80%;
   padding: 0 6px;
   display: flex;
-  justify-content: start;
+  justify-content: flex-start;
   align-items: center;
   text-decoration: none;
-  @media (max-width: 640px) {
-    padding: 0 0px;
+  @media screen and (max-width: 768px) {
+    padding: 0 10px;
   }
 `;
 export const Span = styled.div`
@@ -132,12 +132,11 @@ export const MobileMenu = styled.div`
   padding: 12px 40px 24px 40px;
   background: ${({ theme }) => theme.card_light + 99};
   transition: all 0.6s ease-in-out;
-  transform: ${({ isOpen }) =>
-    isOpen ? "translateY(0)" : "translateY(-100%)"};
+  transform: ${({ open }) => (open ? "translateY(0)" : "translateY(-100%)")};
   border-radius: 0 0 20px 20px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-  opacity: ${({ isOpen }) => (isOpen ? "100%" : "0")};
-  z-index: ${({ isOpen }) => (isOpen ? "1000" : "-1000")};
+  opacity: ${({ open }) => (open ? "100%" : "0")};
+  z-index: ${({ open }) => (open ? "1000" : "-1000")};
 `;
 
 export const MobileMenuItems = styled.ul`
