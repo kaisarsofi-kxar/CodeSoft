@@ -11,7 +11,6 @@ import {
   ButtonContainer,
   MobileIcon,
   MobileMenu,
-  MobileNavLogo,
   MobileLink,
 } from "./NavbarStyledComponent";
 import { DiCssdeck } from "react-icons/di";
@@ -26,7 +25,7 @@ const Navbar = () => {
       <NavbarContainer>
         <NavLogo to="/">
           <a
-            href=""
+            href="/"
             style={{
               display: "flex",
               alignItems: "center",
